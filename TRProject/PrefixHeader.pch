@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  TRProject
+//
+//  Created by jiyingxin on 16/2/17.
+//  Copyright © 2016年 Tarena. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "AppDelegate.h"
+
+//用于存放全局宏定义 或者 静态字符串
+#import "Constant.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+
+/**================================= 自定义类别 ================================= */
+#import "RequestPaths.h"
+#import "UIView+HUD.h"
+#import "NSObject+AFNetworking.h"
+#import "UIScrollView+Refresh.h"
+#import "NSObject+Parse.h"
+#import "NSString+YX.h"
+
+
+
+#import <MJRefresh.h>    //优秀的滚动视图头部和脚步刷新效果
+#import <AFNetworking.h>        //Github排名第一的第三方网络请求类库，封装了系统的NSURLSession+NSOperation
+#import <UIKit+AFNetworking.h>      //对UIKit类添加类拓展，让诸如UIButton, UIImageView等拥有了网络加载图片的功能
+
+
+/* 改变系统的target+selector模式为 block模式。 带来紧凑的代码风格，高效率的回调执行 */
+#import <BlocksKit.h>
+#import <BlocksKit+MessageUI.h>
+#import <BlocksKit+UIKit.h>
+/* --------------------------- */
+
+#import <YYKit.h>
+
+//#import <FMDB/FMDB.h>       //第三方对数据库的操作类库，是对系统Sqlite3的封装。 使用SQL语句操作数据库
+
+#import <CocoaLumberjack.h> //优秀的替换NSLog的第三方，更加省资源，并且可以定义打印级别
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelError;
+#endif
+
+//#import <GCDAsyncSocket.h>  //第三方socket通讯类库， 对系统CFNetwork类库进行了封装
+
+#import <MBProgressHUD.h>       //实现安卓toast风格提示，弹出提示框架
+
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>         //超好用的链式书写AutoLayout的第三方类库，好用的根本停不下来
+
+#import <UIImageView+WebCache.h>  //SDWebImage
+
+//#import <RESideMenu.h>          //QQ的左侧菜单风格
+
+//#import <MWPhotoBrowser.h>      //图片浏览器
+#import <UITableView+FDTemplateLayoutCell.h>
+
+#endif /* PrefixHeader_pch */
